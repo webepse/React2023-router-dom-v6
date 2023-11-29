@@ -30,16 +30,20 @@ const router = createBrowserRouter([
   },
   {
     path:'/cars',
-    element: <Cars />, 
+    element: <Cars />,
+    children: [
+      {
+        path: "/cars/new",
+        element: <NewCar />
+      },
+      {
+        path:'/cars/:model',
+        element: <Car />
+      },
+    ]
   },
-  {
-    path:'/cars/:model',
-    element: <Car />
-  },
-  {
-    path: "/cars/new",
-    element: <NewCar />
-  }
+  
+
 
 ])
 
