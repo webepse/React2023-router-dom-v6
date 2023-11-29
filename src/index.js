@@ -10,6 +10,7 @@ import NotFound from './components/NotFound';
 import Cars from './components/Cars';
 import NewCar from './components/NewCar';
 import Marque from './components/Marque';
+import Car from './components/Car';
 
 const MyApp = () => (
   <Router>
@@ -19,6 +20,7 @@ const MyApp = () => (
       <Route path="marques" element={<Marques />} />
       <Route path="cars" element={<Cars />} />
       <Route path="cars/new" element={<NewCar />} />
+      <Route path="cars/:model" element={<Car />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </Router>
